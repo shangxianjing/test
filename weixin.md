@@ -1236,7 +1236,8 @@ var packageValue = "bank_type=WX&body=%E5%8D%83%E8%B6%B3%E9%87%91%E7%AE%8D%E6%A3
 	  opId:(Number类型) 必选  操作ID，此函数中不起作用，可忽略。	
 	  dataType:(Number类型) 必选  数据类型详见CONSTANT中Callback方法数据类型	
 	  data:(Json类型) 必选  返回的数据,正确格式如下:
-````{ 
+````
+{ 
 "access_token":"ACCESS_TOKEN", 
 "expires_in":7200, 
 "refresh_token":"REFRESH_TOKEN",
