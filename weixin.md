@@ -21,7 +21,7 @@
  ![](http://newdocx.appcan.cn/docxapi/getCImg?img=162019s2015p6u16v.png)
 #### 开源源码：
 插件测试用例与源码下载：[点击](http://plugin.appcan.cn/details.html?id=195_index) 插件中心至插件详情页 （插件测试用例与插件源码已经提供）
- #### 查看版本log
+#### 查看版本log
  [更新历史](http://newdocx1.appcan.cn/newdocx/ejsTemplate?type=1021_975 "更新历史")
 #### 术语表
 ------------
@@ -134,7 +134,7 @@ Path Types
 
 - ##### [~~cbGotoPay~~](#cbGotoPay) 	  支付的回调方法<旧版接口，新版插件不支持>
 
-> ### 			registerApp		
+> ###registerApp		
 
 用户授权		
 
@@ -745,10 +745,10 @@ iOS6.0+
 `uexWeiXin.shareLinkContent(jsonData)`
 ##### 说明：
   分享Link到微信
- ##### 参数：
+##### 参数：
        jsonData: (String类型) 必选   分享的图片内容,JSON格式,格式为: {"thumbImg":"res://icon.png","wedpageUrl":"http://www.appcan.cn","scene":1,"title":"你好,我是AppCan","description":"中国最大的移动中间键平台AppCan对微信分享的图片支持测试"}
  ![](http://appcan-download.oss-cn-beijing.aliyuncs.com/%E5%85%AC%E6%B5%8B%2Fnew.gif)
- ##### 平台支持：
+##### 平台支持：
 Android2.2+	
 iOS6.0+	
 #####版本支持:
@@ -1236,13 +1236,14 @@ var packageValue = "bank_type=WX&body=%E5%8D%83%E8%B6%B3%E9%87%91%E7%AE%8D%E6%A3
 	  opId:(Number类型) 必选  操作ID，此函数中不起作用，可忽略。	
 	  dataType:(Number类型) 必选  数据类型详见CONSTANT中Callback方法数据类型	
 	  data:(Json类型) 必选  返回的数据,正确格式如下:
- ````{ 
+````{ 
 "access_token":"ACCESS_TOKEN", 
 "expires_in":7200, 
 "refresh_token":"REFRESH_TOKEN",
 "openid":"OPENID", 
 "scope":"SCOPE" 
-}````
+}
+````
 	  各字段说明:			
 ![](http://appcan-download.oss-cn-beijing.aliyuncs.com/%E5%85%AC%E6%B5%8B%2Fnew.gif)
 	  图_uexWeiXin_3.0				
@@ -1289,7 +1290,7 @@ var packageValue = "bank_type=WX&body=%E5%8D%83%E8%B6%B3%E9%87%91%E7%AE%8D%E6%A3
 	  opId:(Number类型) 必选  操作ID，此函数中不起作用，可忽略。	
 	  dataType:(Number类型) 必选  数据类型详见CONSTANT中Callback方法数据类型	
 	  data:(Json类型) 必选  返回的数据正确的格式:	
- ````
+````
  { 
 "openid":"OPENID",
 "nickname":"NICKNAME",
@@ -1303,7 +1304,8 @@ var packageValue = "bank_type=WX&body=%E5%8D%83%E8%B6%B3%E9%87%91%E7%AE%8D%E6%A3
 "PRIVILEGE2"
 ],
 "unionid": " o6_bmasdasdsad6_2sgVt7hMZOPfL"
-}````
+}
+````
 	  各字段说明:	
 ![](http://appcan-download.oss-cn-beijing.aliyuncs.com/%E5%85%AC%E6%B5%8B%2Fnew.gif)
 #####版本支持:
@@ -1470,7 +1472,7 @@ uexWeiXin.cbGetAccessToken(opId,dataType,data)
 
 `uexWeiXin.cbGenerateAdvanceOrder(opId,dataType,data)	`
 #####参数:
-	  opId:(Number类型) 必选  操作ID，此函数中不起作用，可忽略。	
+	 opId:(Number类型) 必选  操作ID，此函数中不起作用，可忽略。	
 	 dataType:(Number类型) 必选  数据类型详见CONSTANT中Callback方法数据类型	
 	 data:(String类型) 必选  预支付订单号。	
 #####版本支持:
