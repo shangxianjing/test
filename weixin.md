@@ -1,19 +1,20 @@
-﻿#简介
+﻿
  
 ###uexWeiXin [![](http://appcan-download.oss-cn-beijing.aliyuncs.com/%E5%85%AC%E6%B5%8B%2Fgf.png)]() 
  
  微信分享插件
 #### 业务限制资源规格限制说明
  封装了微信开放平台的SDK，集成了微信登录、微信分享功能；可用于实现第三方账号登录，分享内容到朋友圈或好友；使用之前须从[微信开放平台](https://open.weixin.qq.com/ "微信开放平台")申请开发者账号并创建应用，获取 appid 和 secret。同时包含微信支付功能。如何申请请参考附录。
- ###### 安卓微信插件在使用时，调用接口时只需填写对应的参数，直接在线勾选插件使用；IDE不建议测试使用，原因：IDE涉及证书和包名问题！
- ###### iOS微信插件暂时需要自定义插件使用，需要更改uexWeiXin插件包里uexWeiXin.plist文件的CFBundleURLSchemes值
-  ````
+###### 安卓微信插件在使用时，调用接口时只需填写对应的参数，直接在线勾选插件使用；IDE不建议测试使用，原因：IDE涉及证书和包名问题！
+###### iOS微信插件暂时需要自定义插件使用，需要更改uexWeiXin插件包里uexWeiXin.plist文件的CFBundleURLSchemes值
+````
  修改CFBundleURLSchemes值可参考： 
  <string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>填写自己申请的appID</string>
-			</array>````
+			</array>
+````
 下载地址：[iOS插件包](http://bbs.appcan.cn/forum.php?mod=viewthread&tid=17089&extra=page%3D1 "iOS插件包")
 #### UI展示
  
@@ -32,6 +33,8 @@ Path Types
 |  wgts:// | /storage/emulated/0/widgetone/apps/ xxx(widgetAppId)/  |  /Documents/apps/xxx(widgetAppId)/ |
 |  wgts:// |  /storage/emulated/0/widgetone/widgets/ |  /Documents/widgets/ |
 |  file:///sdcard/ | /storage/emulated/0/  | 无  |
+ 
+   
  
 #API概览
    
