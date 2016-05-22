@@ -1,0 +1,748 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CMP4 demo - bbs.cenfun.com</title>
+<link rel="shortcut icon" href="skins/1.jpg" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<!--必要样式-->  
+ <script type="text/javascript" src="js/menus.js"></script>
+ <!--online视频切换 <script type="text/javascript" src="js/swfobject.js"></script>-->
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+<script type="text/javascript" src="js/modernizr.custom.25376.js"></script>
+ <script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script> 
+<style type="text/css" media="screen">
+html, body { height:100%; margin:0; padding:0;  /* background: radial-gradient(circle at center center , transparent 0%, rgba(0, 0, 0, 0.4) 100%) repeat fixed 0% 0%, url('skins/noisetiledark.gif') repeat scroll 0% 0% #0E1E20;*/}
+</style>
+<script language="javascript">
+    var int = self.setInterval("clock()", 50)
+    function clock() {
+        var t = new Date()
+        document.getElementById("clock").value = t
+    }
+</script> 
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jqScroll.js"></script>
+
+ 
+
+<script type="text/javascript">	
+$(document).ready(function(){
+	$("#roll_top").hover(function() {
+	// $("#orderedlist li:last").hover(function() {
+	$(this).addClass("blue"); $(".up").css("display", "block");
+	}, 
+	function() {
+	$(this).removeClass("blue"); $(".up").css("display", "none");
+	});
+
+	$(".up").css("display", "none");
+
+
+	
+ 
+	/*返回顶部*/
+	$('#roll_top').hide();
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 300) {
+			$('#roll_top').fadeIn(400);//当滑动栏向下滑动时，按钮渐现的时间
+		} else {
+			$('#roll_top').fadeOut(0);//当页面回到顶部第一屏时，按钮渐隐的时间
+		}
+	});
+	$('#roll_top').click(function () {
+		$('html,body').animate({
+			scrollTop : '0px'
+		}, 300);//返回顶部所用的时间 返回顶部也可调用goto()函数
+	});
+});
+function goto(selector){
+	$.scrollTo ( selector , 1000);	
+}
+</script>
+</head>
+
+<body>
+	
+	 
+<header>
+	<span class="theme">MyFreetime   </span>
+    <a href="javascript:history.back();" target="_parent"style="font-size: 19px;"> Previous Page <span></span> </a>	
+    <span style=" margin-left:62%"><button id="showMenu">Pointin</button></span> 
+    <div id="perspective"  title="PointOut"class="perspective effect-rotatetop"  >
+					
+					<nav class="outer-nav bottom horizontal">
+							<a href="javascript:history.back();" class="icon-home">Home</a>
+		<a href="#" class="icon-news">News</a>
+		<a href="#" class="icon-image">Images</a>
+		<a href="#" class="icon-upload">Uploads</a>
+		<a href="#" class="icon-star">Favorites</a>
+		<a href="#" class="icon-mail">Messages</a>
+		<a href="#" class="icon-lock">Security</a>
+						</nav>
+						<div class="container"><div class="wrapper" ><!-- wrapper needed for scroll --> 
+			 
+					 </div><!-- /container --></div><!-- wrapper -->
+				</div><!-- /perspective -->
+    <div id="cw-nav-wrap" class="clearfix">
+					<div  style=" width:978px;margin: 0px auto;">
+						<div id="cw-main-logo">
+		                       
+							<a href="/" title="The CW: TV Now"></a>
+						</div>
+					
+						 
+							
+					
+		<div id="menubar">
+		<ul id="menus" class="menus">
+			<li class="current-cat"><a title="Home" href="../">All videos days</a></li>
+			<li class="cat-item cat-item-40"><a href="javascript:void(0);" title="View all posts filed under .Net">mon</a><ul style="visibility: hidden; position: absolute; overflow: hidden; display: block; left: 528px; top: 174px; opacity: 0.9; height: 0px;" class="children">
+					<li class="cat-item cat-item-41"style="width:90px;"><a href="javascript:void(0);" title="View all posts filed under ADO.NET"style=" padding-left:10px">ADO.NET</a></li>
+					<li class="cat-item cat-item-42"style="width:90px;"><a href="javascript:void(0);" title="View all posts filed under ASP.NET"style=" padding-left:10px">ASP.NET</a></li>
+					<li class="cat-item cat-item-43"style="width:90px;"><a href="javascript:void(0);" title="View all posts filed under C#"style=" padding-left:10px">C#</a></li>
+				</ul></li>
+			<li class="cat-item cat-item-50"><a href="javascript:void(0);" title="View all posts filed under Java">wed</a><ul style="visibility: hidden; position: absolute; overflow: hidden; display: block; height: 0px;" class="children">
+					<li class="cat-item cat-item-51"> <table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under EJB"style=" padding-left:10px">Struts</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">The Originals</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Java core"style=" padding-left:10px">Hart of Dixie</a></td>
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-52"> <table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under EJB"style=" padding-left:10px">The Vampire Diaries</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">The Tomorrow People</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Java core"style=" padding-left:10px">The Vampire Diaries</a></td>
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-53"> <table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under EJB"style=" padding-left:10px">Star-Crossed</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">Reign</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under EJB"style=" padding-left:10px">The 100</a></td>
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-54"><table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">Beauty and the Beast</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">Spring</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">The Originals</a></td>
+     
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-55"><table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under JSP"style=" padding-left:10px">The Originals</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Spring"style=" padding-left:10px">Reign</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Struts"style=" padding-left:10px">The Green</a></td>
+  </tr>
+</table></li>
+					 
+				</ul></li>
+			<li class="cat-item cat-item-60"><a href="javascript:void(0);" title="View all posts filed under Web">fri</a><ul style="visibility: hidden; position: absolute; overflow: hidden; display: block; height: 0px;" class="children">
+					<li class="cat-item cat-item-61"><table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under (X)HTML" style=" padding-left:10px">(X)HTML</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under ACSS" style=" padding-left:10px">CSS</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under EJB"style=" padding-left:10px">EJB</a></td>
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-62"><table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under Hibernate"style=" padding-left:10px">Hibernate</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Java core"style=" padding-left:10px">Javacore</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under JSP"style=" padding-left:10px">JSP</a></td>
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-63"><table width="300" border="0">
+  <tr>
+    <td><a href="javascript:void(0);" title="View all posts filed under Spring"style=" padding-left:10px">Spring</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under Struts"style=" padding-left:10px">Struts</a></td>
+    <td><a href="javascript:void(0);" title="View all posts filed under ACSS" style=" padding-left:10px">php</a></td>
+  </tr>
+</table></li>
+					<li class="cat-item cat-item-64"><a href="javascript:void(0);" title="View all posts filed under JavaScript"style=" padding-left:23px">JavaScript</a></li>
+				</ul></li>
+				<li class="current-cat"><a title="Home" href="../">apps</a></li>
+		</ul>
+	  </div></div>	
+   </div>
+
+</header>
+
+ <div class="st-content">
+<div  id="clocks">
+    <div>
+	<p> 音乐饮吧 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+         <a href=" mp3/ndex.htm" target="_parent"> Wooden <span>音乐之旅</span> </a>
+    </p><span><input type="text" id="clock" size="35" /> </span>
+    </div>
+	<div id="sitenav" style="width: 990px;font: italic 500 22px 'GibsonLightBoldItalic',Arial,sans-serif;color: #C3C3C3; height:  px;">
+						<span class="ot-title">				
+                          On Tonight:
+						<span class="ot-shows" style="font-size: 19px;"><a href="/shows/star-crossed">Star-Crossed</a> 8<span class="ti3">.7c</span> | 
+								<a href="/shows/the-tomorrow-people">The Tomorrow People</a> 9<span class="ti3">.8c  </span> </span></span>
+								
+	</div>
+	
+	</div> 
+	<div id="st-right-content"  >
+	
+				<!--<div id="ad_160x600">qq
+<script type="text/javascript">
+    googletag.cmd.push(function() { googletag.display("ad_160x600"); });
+</script><div style="border: 0pt none;" id="google_ads_iframe_/4266/cwtv.home_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/4266/cwtv.home_0" id="google_ads_iframe_/4266/cwtv.home_0" frameborder="0" height="600" scrolling="no" width="160"></iframe></div>
+				</div>必要样式-->
+
+	
+				<div id="wheretowatch">
+					<h4>WHERE TO WATCH</h4>
+					<ul>
+						<li><a href="/thecw/stations/">STATIONS</a></li>
+						<li><a href="/schedule/">SCHEDULE</a></li>
+						<li><a href="/thecw/the-cw-network-app">MOBILE APP</a></li>
+						<li><a href="/thecw/the-cw-xbox-360-app">XBOX 360 APP</a></li>
+						<li><a href="/thecw/the-cw-win-8-app">WINDOWS 8 APP</a></li>
+					</ul>
+				</div>
+
+	
+			</div>
+	<div id="Div1"  >
+	
+				<!--<div id="ad_160x600">qq
+<script type="text/javascript">
+    googletag.cmd.push(function() { googletag.display("ad_160x600"); });
+</script><div style="border: 0pt none;" id="google_ads_iframe_/4266/cwtv.home_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/4266/cwtv.home_0" id="google_ads_iframe_/4266/cwtv.home_0" frameborder="0" height="600" scrolling="no" width="160"></iframe></div>
+				</div>必要样式-->
+
+	
+				<div id="Div2">
+					<img width="300" title="喵！我" alt="先扫描我" height="250" border="0/" src=" images/weixin.png"></img>
+				</div>
+
+	
+			</div>	
+		
+<div class="auto con_player" style="  z-index:-11;height:353px; background-color: #373737;position:relative">
+  <div id="player" style=" background-image: width:70%;height:333px;  margin-bottom:12%; margin-left:16%;margin-right:16%; z-index:-12; position:relative"></div>
+  
+  
+
+ </div>
+<script type="text/javascript" src="cmp.js"></script> 
+<script type="text/javascript">
+    var cmpo;
+    function cmp_loaded(key) {
+        //cmp loaded
+        cmpo = CMP.get("cmp");
+        if (cmpo) {
+            //cmp callback
+            //alert(cmpo.config("version"));
+            document.title = cmpo.config("name");
+            cmpo.addEventListener("model_load", "cmp_model_load");
+        }
+    }
+    function cmp_model_load(data) {
+        document.title = cmpo.item("label");
+    }
+    var flashvars = {
+        api: "cmp_loaded"
+    };
+    //id, width, height, swf_url, flashvars, params, attrs
+    var htm = CMP.create("cmp", "100%", "100%", "cmp.swf", flashvars);
+    document.getElementById("player").innerHTML = htm;
+</script>
+
+ 
+<div class="layout-978">
+<div id="videolatest">
+		<!-- VIDEO SECTION START -->
+
+
+
+				<div style="-moz-user-select: none;" id="caro3" class="carouselwrapper">
+					<h4 class="hdr1">LATEST <span>EPISODES</span></h4>
+					<div class="carouselinner">
+						<div style="display: block;" class="caroArrow prev"><a  href="javascript:;"></a></div>
+						<div style="display: block; text-align: start; float: left; position: relative; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 892px; height: 200px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper">
+ 
+	 <!-- VIDEO SECTION START  <div class="chanegecolor" name="0">
+		<span class="b00eaff"><a href="javascript:void(0)"><img alt="jquery适合类似手机类产品所参数选择展示效果" src="images/icon11.gif" name="0" /></a>黑色</span>
+		<span><a href="javascript:void(0)"><img alt="jquery适合类似手机类产品所参数选择展示效果" src="images/icon12.gif" name="1" /></a>白色</span> 
+		<span><a href="javascript:void(0)"><img alt="jquery适合类似手机类产品所参数选择展示效果" src="images/icon13.gif" name="2" /></a>粉色</span>	
+	</div>  
+	
+	<td><div><a href="javascript:"><img src="images/3.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/4.jpg"></a></div></td>VIDEO SECTION START -->
+	
+	<div class="sPic">
+		<a class="btnleft" href="javascript:;"></a>
+		<a class="btnright" href="javascript:;"></a>
+		<div class="info">
+			<table>
+				<tbody>
+					<tr>
+						<td class="current"><div  class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/1.jpg">
+									 
+									<div class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">Beauty and the Beast</p>
+									<p>About Last Night </br>(Ep.216)</p>
+									<p class="videodate">Original Air Date: 3.10.14</p>
+								</a>
+							</div>
+	</td>
+						<td><div onMouseOver="fun()" onMouseOut="fun2()" class="videowrapped slide">
+								<a class="thumbLink" href="javascript:jsChangeVideo('video/onair.flv'); "   title="Enemy of My Enemy">
+									 
+										<img  alt=""src="images/2.jpg" />
+									 
+									<div  id="hid"class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">The Originals</p>
+										<p class="d2">Le Grand Guignol (Ep.115)<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">The Originals</p>
+									<p>Le Grand Guignol (Ep.115)</p>
+									<p class="videodate">Original Air Date: 3.4.14</p>
+								</a>
+							</div></td>
+						<td><div onMouseOver="fun3()" onMouseOut="fun4()" class="videowrapped slide">
+								<a class="thumbLink" href=" " title="Enemy of My Enemy">
+									 
+										<img src="images/3.jpg">
+									 
+									<div id="hid1" class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">Hart of Dixie</p>
+									<p>Here You Come Again (Ep.314)</p>
+									<p class="videodate">Original Air Date: 3.21.14</p>
+								</a>
+							</div></td>
+						<td><div onMouseOver="fun5()" onMouseOut="fun6()"  class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/4.jpg">
+									 
+									<div id="hid2" class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">The Vampire Diaries</p>
+									<p>While You Were Sleeping (Ep.516)</p>
+									<p class="videodate">Original Air Date: 3.20.14</p>
+								</a>
+							</div></td>
+						<td><div  onMouseOver="fun7()" onMouseOut="fun8()" class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/5.jpg">
+									 
+									<div id="hid3"class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">The Tomorrow People</p>
+									<p>Enemy of My Enemy (Ep.115)</p>
+									<p class="videodate">Original Air Date: 3.5.14</p>
+								</a>
+							</div></td>
+						<td><div  onMouseOver="fun9()" onMouseOut="fun10()" class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/6.jpg">
+									 
+									<div id="hid4"class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">The 100</p>
+									<p>Earth Skills </br>(Ep.102)</p>
+									<p class="videodate">Original Air Date: 3.26.14</p>
+								</a>
+							</div></td>
+						<td><div  onMouseOver="fun11()" onMouseOut="fun12()" class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/7.jpg">
+									 
+									<div id="hid5"class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">Star-Crossed</p>
+									<p>Dreamers Often Lie (Ep.105)</p>
+									<p class="videodate">Original Air Date: 3.17.14</p>
+								</a>
+							</div></td>
+						<td><div  onMouseOver="fun13()" onMouseOut="fun14()" class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/8.jpg">
+									 
+									<div id="hid6"class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">The Vampire Diaries</p>
+									<p>Gone Girl </br>(Ep.515)</p>
+									<p class="videodate">Original Air Date: 3.6.14</p>
+								</a>
+							</div></td>
+						<td><div  onMouseOver="fun15()" onMouseOut="fun16()" class="videowrapped slide">
+								<a class="thumbLink" href="/cw-video/the-tomorrow-people/enemy-of-my-enemy/?play=72b18f61-7e09-49dc-9443-9ac647f98156" title="Enemy of My Enemy">
+									 
+										<img src="images/9.jpg">
+									 
+									<div id="hid7"class="videoplayhover2"></div>
+									<div class="videodetails">
+										<p class="et">Enemy of My Enemy</p>
+										<p class="d2">Season 1, Ep. 15<br><span class="d4">Original Air Date: Mar 5, 2014</span></p>
+										<p class="d3">Julian is back and angrier than ever, but when he gets caught by Ultra he is forced to strike a deal that could cost his and Stephen's lives. John disobeys Cara's orders again.</p>
+									</div>
+									<p class="t1">Reign</p>
+									<p>Royal Blood </br>(Ep.112)</p>
+									<p class="videodate">Original Air Date: 2.27.14</p>
+								</a>
+							</div></td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<tbody>
+					<tr style="display:none">
+						<td class="current"><div><a href="javascript:"><img src="images/sp8.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp9.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp10.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp11.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp12.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp13.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp14.jpg"></a></div></td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<tbody>
+					<tr style="display:none">
+						<td class="current"><div><a href="javascript:"><img src="images/sp15.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp16.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp17.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp18.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp19.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp20.jpg"></a></div></td>
+						<td><div><a href="javascript:"><img src="images/sp21.jpg"></a></div></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+ 
+						<div style="display: block;" class="caroArrow next"><a class="btnright" href="javascript:;"></a></div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+		</div>
+	 	
+	</div>
+<div class="right" style="position: absolute; top: 1163px; left: 475px; display: none;" id="hoverContainer"><div class="left"></div><div class="content"></div><div class="right"></div></div>
+</div> 
+
+
+</div>
+  
+ 
+<div  class="containe" >
+	<div class="header oh">
+     
+    </div>
+    <div class="content">
+    	<h2 class="title"> 吸血鬼小日记</h2>
+    	<div class="info2 oh">
+        	<a href="#" class="avatar"><img src=" images/user.jpg" title="haibao" alt=""></a>
+            <div class="user">
+            	<span>作者：<a href="http://www.smwell.com">smwell.com</a></span> <span>浏览：20次</span> <span>评论：100次</span> <span>发布于：2014-02-14</span>
+                <div class="share">
+                    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到开心网" href="#" class="bds_kaixin001" data-cmd="kaixin001"></a><a title="分享到豆瓣网" href="#" class="bds_douban" data-cmd="douban"></a><a title="分享到Facebook" href="#" class="bds_fbook" data-cmd="fbook"></a><a title="分享到linkedin" href="#" class="bds_linkedin" data-cmd="linkedin"></a><a title="分享到Twitter" href="#" class="bds_twi" data-cmd="twi"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a></div>
+                </div>
+            </div>
+        </div>
+    	<p>饿了就炖土豆！寞然的有种失落感，那是因为你要回去了。你说想我时打个电话，我会马上跑到你身边。我笑了，我怎舍得折腾你呢！</p>
+        <p><img src=" images/test_pic1.jpg" alt=""></p>
+        <p>曾经不懂得爱情的滋味，以为爱就是占有；初尝爱情滋味， 以为爱就是付出；爱情消逝后， 才发觉，如果你爱上一个不爱你的人，爱情很可笑，就算你倾尽所有，最后也只能换来一个孤 单的结局。</p>
+        <p><img src=" images/test_pic2.jpg" alt=""></p>
+        <p>活要活得美好，梦要梦得热烈，爱要爱得完整。任何值得你去拥有的东西，就一定是值得等待的;一个女人最好的嫁妆那就是一颗体贴温暖的心，而一个男人最好的聘礼那也就是一生的迁就与疼爱;如果不想输，那么你就别偷懒，你努力一点，也就是为了未来更好的自己;那些闪闪发光如同信仰存在的人，但是你不知道在他背后付出的代价和努力，让他看起来毫不费力;人生有个对手不是坏事，那是会让你逆风而行。你习惯了阻力后就是会跑得更快、是飞得更高;没有人是傻瓜。只是在有时候，我们是要去选择去装傻来感受那一点点叫做幸福的东西;不要放弃做自己，人生很短，根本没时间模仿别人。经历着最深的痛苦的人往往是那些总是逗别人开心的人。--活在当下</p>
+     
+
+        
+ <div  style="  height:500px;">
+        <embed src="http://tv.sohu.com/upload/swf/20130627/PlayerShell.swf?autoplay=false&amp;vid=1233590&amp;skinNum=8&amp;sogouBtn=0&amp;api_key=2369879459a1dff4033fde2bb6b023e6&amp;recommend=&amp;showRecommend=0" type="application/x-shockwave-flash" width="550" height="400" quality="high" />
+         
+
+<div style="  float:right; display: inline"><h3 style=" width:150px;" >我的微博</h3>
+<iframe id="sina_widget_1165079767" style="width:100%; height:500px;" frameborder="0" scrolling="no" src="http://service.weibo.com/widget/widget_blog.php?uid=2141711783&height=500&skin=wd_01&showpic=1"></iframe>
+</div> 
+        </div>
+        <p>哈哈。最后在此处推荐一个在线测试响应式的网址：<a target="_blank" href="http://www.responsinator.com">http://www.responsinator.com</a></p>        <p><font color="red">PS：这是我第一次写响应式，可能还有很多地方没考虑到，如有啥问题欢迎指出！ QQ：964279742</font></p>
+    </div>
+      <!--<div class="basefooter">
+    	苏ICP备xxxxxxx号，版权所有 © 2013-2014 SMWELL.COM
+    </div> -->
+</div>
+  
+ 
+<script>
+    //百度分享代码
+    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "2", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+
+    //菜单显示隐藏代码
+    $('.menu_btn').click(function() {
+        $('.nav').toggle(400); //简单实现一下，如需更复杂效果自己折腾吧
+    });
+
+    window.onresize = function() { $('.nav').show(); }  
+</script>
+
+<div class="footer"><div class="layout-978" > 
+ <div  id="cw-main-footer-1" class="clearfix"  > 
+    <div class="footercol fcol1">
+				<h4>SHOWS</h4>
+	
+	
+				<ul>
+	
+					<li><a href="/shows/americas-next-top-model/" title="America's Next Top Model">America's Next Top Model</a></li>
+
+					<li><a href="/shows/arrow/" title="Arrow">Arrow</a></li>
+
+					<li><a href="/shows/beauty-and-the-beast/" title="Beauty and the Beast">Beauty and the Beast</a></li>
+
+					<li><a href="/shows/breaking-pointe/" title="Breaking Pointe">Breaking Pointe</a></li>
+
+					<li><a href="/shows/capture/" title="Capture">Capture</a></li>
+
+					<li><a href="/shows/celebtv/" title="CelebTV">CelebTV</a></li>
+
+					<li><a href="/shows/hart-of-dixie/" title="Hart of Dixie">Hart of Dixie</a></li>
+
+					<li><a href="/shows/nikita/" title="Nikita">Nikita</a></li>
+
+					<li><a href="/shows/oh-sit/" title="Oh Sit!">Oh Sit!</a></li>
+
+					<li><a href="/shows/perfect-score/" title="Perfect Score">Perfect Score</a></li>
+
+				</ul>
+
+				<ul>
+	
+					<li><a href="/shows/reign/" title="Reign">Reign</a></li>
+
+					<li><a href="/shows/star-crossed/" title="Star-Crossed">Star-Crossed</a></li>
+
+					<li><a href="/shows/supernatural/" title="Supernatural">Supernatural</a></li>
+
+					<li><a href="/shows/the-100/" title="The 100">The 100</a></li>
+
+					<li><a href="/shows/the-carrie-diaries/" title="The Carrie Diaries">The Carrie Diaries</a></li>
+
+					<li><a href="/shows/the-originals/" title="The Originals">The Originals</a></li>
+
+					<li><a href="/shows/the-tomorrow-people/" title="The Tomorrow People">The Tomorrow People</a></li>
+
+					<li><a href="/shows/the-vampire-diaries/" title="The Vampire Diaries">The Vampire Diaries</a></li>
+
+					<li><a href="/shows/whose-line-is-it-anyway/" title="Whose Line Is It Anyway?">Whose Line Is It Anyway?</a></li>
+
+				</ul>
+
+
+			</div>
+	<div class="footercol fcol2">
+				<h4>SomeTimes.COM</h4>
+				<ul>
+					<li><a href="/cw-video/" title="Video">Video</a></li>
+					<li><a href="/schedule/" title="Schedule">Schedule</a></li>
+					<li><a href="/thecw/stations/" title="Stations">Stations</a></li>
+					<li><a href="/apps/" title="Apps">Apps</a></li>
+					<li><a href="/photos/" title="Photos">Photos</a></li>
+					<li><a href="/music/" title="Music">Music</a></li>
+					<li><a href="http://blog.cwtv.com/" title="Blog">Blog</a></li>
+					<li class="ipad-hide"><a href="http://causes.cwtv.com" title="Causes">Causes</a></li>
+					<li><a href="/thecw/cw-sitemap-pg1" title="Sitemap">Sitemap</a></li>
+					<li><a href="/?set_mobile_preference=mobile" title="Mobile Site">Mobile Site</a></li>
+				</ul>
+			</div>
+	<div class="footercol fcol3">
+				<h4>ABOUT</h4>
+				<ul>
+					<li><a href="/thecw/about-the-cw/" title="About The CW">About The CW</a></li>
+					<li><a href="/feedback/comments/" title="Feedback">Feedback</a></li>
+					<li><a href="/thecw/feedback-help/" title="Help">HELP</a></li>
+					<li><a href="/contact/ad-sales/" title="Advertise With Us">Advertise With Us</a></li>
+					<li><a href="/thecw/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
+					<li><a href="/thecw/terms-of-use/" title="Terms of Use">Terms of Use</a></li>
+					<li><a href="http://www.cbscorporation.com" target="_blank" title="CBS Corporation">CBS Corporation</a></li>
+					<li><a href="http://www.wb.com" target="_blank" title="Warner Bros.">Warner Bros.</a></li>
+				</ul>
+			</div>
+	<div class="footercol fcol4">
+				<ul>
+				<li>Official site of The CW Television Network, featuring Arrow, The Vampire Diaries, Supernatural, The Originals, The Tomorrow People, Reign, Beauty and the Beast, The Carrie Diaries, Nikita, Hart of Dixie, Whose Line Is It Anyway?, and America's Next Top Model. Coming Midseason, The 100 and Star-Crossed. On CWTV.com watch full episodes, listen to music, join the CW community, and more.</li>
+				<li>&nbsp;</li>
+				<li itemscope="" itemtype="http://schema.org/Organization">© 2014 <span itemprop="name" style="color: #C2C2C2; font-size: 10px;">The CW Television Network.</span></li>
+			</ul>
+			</div>
+ </div>
+</div> </div>
+
+<script   src="js/classie.js"></script>
+<script   src="js/menu.js"></script>
+<script type="text/javascript">
+                                      $(document).ready(function() {
+
+                                          var curid = 0;
+
+                                          var n = $(".chanegecolor").attr("name");
+
+                                          $(".chanegecolor img").click(function() {
+                                              var number = $(this).attr('name');
+                                              var cH = $(".chanegecolor img").length;
+                                              for (var i = 0; i <= cH; i++) {
+                                                  $(".sPic .info tr").eq(i).hide();
+                                                  $(".bigPic .info tr").eq(i).hide();
+                                                  $(".chanegecolor span").eq(i).removeClass("b00eaff");
+                                              }
+                                              $(".sPic .info tr").eq(number).show();
+                                              $(".bigPic .info tr").eq(number).show();
+                                              $(".chanegecolor span").eq(number).addClass("b00eaff");
+                                              var s = $(".chanegecolor").attr('name', number);
+                                              $(".sPic .info tr").eq(number).find("td").removeClass("current");
+                                              $(".sPic .info tr").eq(number).find("td").eq(0).addClass("current");
+                                              $(".bigPic .info").scrollLeft(0)
+                                              return curid = 0;
+                                          })
+
+                                          $(".sPic .info td").click(function() {
+                                              var n = $(".chanegecolor").attr('name');
+                                              $(".sPic .info tr").eq(n).find("td").removeClass("current");
+                                              $(this).addClass("current");
+                                              curid = $(this).index();
+                                              $(".bigPic .info").animate({ "scrollLeft": curid * 818 })
+                                          });
+
+                                          $(".bigPic a.btnleft").click(function() {
+                                              var n = $(".chanegecolor").attr('name');
+                                              curid--;
+                                              if (curid < 0) {
+                                                  alert("已经是第一张了！");
+                                                  curid = 0;
+                                              } else {
+                                                  $(".bigPic .info").animate({ "scrollLeft": curid * 818 })
+                                              }
+                                              $(".sPic .info tr").eq(n).find("td").removeClass("current");
+                                              $(".sPic .info tr").eq(n).find("td").eq(curid).addClass("current");
+                                          });
+
+                                          $(".bigPic a.btnright").click(function() {
+                                              var n = $(".chanegecolor").attr('name');
+                                              curid++;
+                                              if (curid > $(".sPic .info tr").eq(n).find("td").size() - 1) {
+                                                  alert("已经是最后一张了！");
+                                                  curid = $(".sPic .info tr").eq(n).find("td").size() - 1;
+                                              } else {
+                                                  $(".bigPic .info").animate({ "scrollLeft": curid * 818 })
+                                              }
+                                              $(".sPic .info tr").eq(n).find("td").removeClass("current");
+                                              $(".sPic .info tr").eq(n).find("td").eq(curid).addClass("current");
+                                          });
+
+                                          $(".sPic a.btnleft").click(function() {
+                                              $(".sPic .info").animate({ "scrollLeft": "-=113" })
+                                          });
+
+                                          $(".sPic a.btnright").click(function() {
+                                              $(".sPic .info").animate({ "scrollLeft": "+=113" })
+                                          });
+
+                                      });
+</script>
+
+<script>
+    function fun() {
+        document.getElementById("hid").style.display = "inline";
+    }
+    function fun2() {
+        document.getElementById("hid").style.display = "none";
+    } function fun3() {
+        document.getElementById("hid1").style.display = "inline";
+    }
+    function fun4() {
+        document.getElementById("hid1").style.display = "none";
+    } function fun5() {
+        document.getElementById("hid2").style.display = "inline";
+    }
+    function fun6() {
+        document.getElementById("hid2").style.display = "none";
+    } function fun7() {
+        document.getElementById("hid3").style.display = "inline";
+    }
+    function fun8() {
+        document.getElementById("hid3").style.display = "none";
+    } function fun9() {
+        document.getElementById("hid4").style.display = "inline";
+    }
+    function fun10() {
+        document.getElementById("hid4").style.display = "none";
+    } function fun11() {
+        document.getElementById("hid5").style.display = "inline";
+    }
+    function fun12() {
+        document.getElementById("hid5").style.display = "none";
+    } function fun13() {
+        document.getElementById("hid6").style.display = "inline";
+    }
+    function fun14() {
+        document.getElementById("hid6").style.display = "none";
+    } function fun15() {
+        document.getElementById("hid7").style.display = "inline";
+    }
+    function fun16() {
+        document.getElementById("hid7").style.display = "none";
+    }
+</script>
+	
+
+<div class="toTop" id="roll_top"><span class="up"> 返回<br />顶部</span></div>
+	
+</body>
+</html>

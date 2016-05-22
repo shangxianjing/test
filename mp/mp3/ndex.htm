@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CMP4 demo - bbs.cenfun.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css" media="screen">
+html, body { height:100%; margin:0; padding:0; text-align:center; background:#f5f5f5; }
+</style>
+</head>
+
+
+
+<body>
+<header>音乐饮吧 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:history.back();" target="_parent"> Wooden <span>音乐之旅</span> </a></header>
+
+<div id="player" style="width:100%;height:100%;"></div>
+<script type="text/javascript" src="cmp.js"></script> 
+<script type="text/javascript">
+var cmpo;
+function cmp_loaded(key) {
+	//cmp loaded
+	cmpo = CMP.get("cmp");
+	if (cmpo) {
+		//cmp callback
+		//alert(cmpo.config("version"));
+		document.title = cmpo.config("name");
+		cmpo.addEventListener("model_load", "cmp_model_load");
+	}
+}
+function cmp_model_load(data) {
+	document.title = cmpo.item("label");
+}
+var flashvars = {
+	api : "cmp_loaded"
+};
+//id, width, height, swf_url, flashvars, params, attrs
+var htm = CMP.create("cmp", "100%", "100%", "cmp.swf", flashvars);
+document.getElementById("player").innerHTML = htm;
+</script>
+
+<h1>音乐饮吧 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:history.back();" target="_parent"> Wooden <span>音乐之旅</span> </a></h1>
+
+</body>
+</html>
